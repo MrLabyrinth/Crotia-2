@@ -640,7 +640,20 @@ input[type="date"] {
     left: 0px;
     transform: scale(1)
 }
-
+  
+  
+  .mycolumn {
+    float: left;
+    width: 50%;
+    padding: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .myrow:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
 
 .margin {
     margin: 2rem 0rem
