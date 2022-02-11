@@ -92,7 +92,11 @@
 					<label for="message">Message</label> 
 					<textarea name="msg" id="" msg cols="30" rows="5" class="form-control"></textarea>
 				</div>
-				<button type="submit" onclick="if(confirm('Are you sure to submit?')){}else{return false;};" class="btn btn-primary">Submit</button>
+				<button type="submit" onclick="alertbox()" class="btn btn-primary">Submit</button>
+				<script>
+					function alertbox(){
+						alert("Are you sure to submit?");
+					}
 				</script>
 			  </form>
 	</div>
