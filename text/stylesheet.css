@@ -1,14 +1,17 @@
+/* removes the margins and margins; removes the white space */
 * {
     margin: 0;
     padding: 0;
     font-family: Arial, Helvetica, sans-serif;
 }
 
+/* for smooth scroll effect */
 html{
     scroll-behavior: smooth;
 }
 
-/*=========================================*/
+/*for navigation bar*/
+/*navbar container*/
 .topnav {
     position: sticky;
       background-color: #182221;
@@ -20,6 +23,7 @@ html{
         box-shadow: 0px 1px 5px  #464646;
     }
     
+    /*for the links in the navbar*/
     .topnav a {
         display: inline-block;
         color: #92d1c2;
@@ -31,6 +35,7 @@ html{
         font-size: 1.3em;
     }
     
+    /*our attemt at making the nav bar responsive*/
     .hidden {
         margin: 0 auto;
         display: none;
@@ -67,6 +72,7 @@ html{
         font-size: 1rem;
       }
 
+    /*for the drop down contents*/  
     .dropdown {
           margin: 0 auto;
         display: inline-block;
@@ -103,7 +109,6 @@ html{
       font-size: 1rem;
     }
     
-    
     .topnav a:hover, .dropdown:hover .dropbtn {
         color: #e0e0e0;
     }
@@ -116,9 +121,7 @@ html{
       display: block;
     }
 
-/*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
-
-
+    /*for smaller screens*/
     @media screen and (max-width: 800px) {
     .topnav a, .dropdown .dropbtn {
         display: none;
@@ -141,10 +144,8 @@ html{
 }
 
 
-/*=========================================*/
-.box{
-    height: 100vh;	
-}
+/*==================== Homepage ====================*/
+/*for the container for the logo at the top of the page */
 .topbox {
     position: relative;
     display: flex;
@@ -158,6 +159,8 @@ html{
     text-transform: uppercase;
     font-weight: bold;
 }
+
+/*for the image behind the logo */
 .header-img {
     background-image: url('pictures/homepage/croatiabg.jpg');
     height: 100vh;
@@ -174,6 +177,7 @@ html{
     background-color: #000;
 }
 
+/*for the parallax effect*/
 .paralax {
     margin: 0;
     padding: 0%;
@@ -188,6 +192,7 @@ html{
     position: relative;
 }
 
+/* container for the sections of the homepage*/
 .mybox{
     place-items: center;
     justify-content: center;
@@ -197,6 +202,7 @@ html{
     background-color: #97cfc2;
 }
 
+/* text container for mybox */
 .mybox-textbox {
     font-size:calc(13px + 1vw);
     text-align: center;
@@ -204,11 +210,13 @@ html{
     padding: 10rem 5rem calc(10px + 10vw) 5rem;
 }
 
+/* dimentions of images in container "mybox"*/
 .mybox img{
     height: 350px;
     width: auto;
 }
 
+/* for the tiny arrow */
 .spanbox{
     bottom: 0;
     transform: rotateZ(90deg);
@@ -219,19 +227,6 @@ html{
     font-size: 3em !important;
 }
 
-.cbox{
-    place-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 10rem 5rem;
-    color: #4b6149;
-    font-size: 1.3em;
-}
-.cbox img{
-    height: 150px;
-    width: 150px;
-    object-fit: cover;
-}
 .border {
     position: absolute;
     background-color: #182221;
@@ -242,58 +237,7 @@ html{
     z-index: 99;
 }
 
-.imagemapbox {
-    background-color: #72936e;
-    align-items: center;
-    text-align: center;
-    padding: 0 ;
-}
-
-.imagemapbox img {
-    width: 50vw;
-}
-
-.image-container {
-    display: inline-block;
-    position: relative;
-    width: 400px;
-}
-
-.image {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.image-overlay {
-    position: absolute;
-    bottom: 100%;
-    left: 0;
-    right: 0;
-    background-color: #97cfc2;
-    overflow: hidden;
-    width: 100%;
-    height:0;
-    transition: .5s ease;
-}
-
-.image-container:hover .image-overlay {
-    bottom: 0;
-    height: 100%;
-}
-
-.overlay-text {
-    color: white;
-    font-size: 20px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-    text-align: center;
-}
-
+/*for the "why us" section*/
 .bottombox{
   place-items: center;
   text-align: center;
@@ -308,12 +252,20 @@ html{
   width: auto;
 }
 
+/*bootstrap card container for the destination and prices table*/
+.card {
+    background-color: #79bbab;
+    border-style: none;
+    padding: 0;
+}
+
+/*edits to the bootstrap table*/
 .table td, .table th{
     border-color: #97cfc2;
     padding: 20px 0;
 }
 
-/*===================================================================*/ 
+/* for carousel */
 .boxincarousel{
     position: absolute;
     border-style: solid;
@@ -388,17 +340,14 @@ html{
     text-decoration: none;
 }
 
+/* carousel for smaller screens */
 @media screen and (max-width: 600px) {
     .carousel-titles{
          text-align: center;
     }
 }
+
 /*===================================================================*/ 
-.card {
-    background-color: #79bbab;
-    border-style: none;
-    padding: 0;
-}
 
 .page-footer {
     font-size: 16px;
@@ -417,7 +366,28 @@ html{
     text-decoration: none;
     color: #97cfc2;
 }
+
+/*=====================================================================*/
+
+/* the container used in the tour destination pages*/
+.cbox{
+    place-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 10rem 5rem;
+    color: #4b6149;
+    font-size: 1.3em;
+}
+
+/*for the images inside cbox */
+.cbox img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+}
+
 /*===================Flights==============*/
+/*the wrapper for the form*/
 .wrapper {
     max-width: 800px;
     margin: 3rem auto;
@@ -431,6 +401,7 @@ html{
     padding-bottom: .5rem;
 }
 
+/*for the radio buttons*/
 .wrapper form .option {
     position: relative;
     padding-left: 25px;
@@ -460,11 +431,6 @@ html{
     background-color: #fff;
     border: 1px solid #aaa;
     border-radius: 50%;
-}
-
-.wrapper form img {
-    height: 100px;
-    width: 100px;
 }
 
 .wrapper form .option input:checked~.checkmark:after {
@@ -500,6 +466,13 @@ html{
     color: #fff;
 }
 
+/* for the images inside the form*/
+.wrapper form img {
+    height: 100px;
+    width: 100px;
+}
+
+/*for the form inputs*/
 .wrapper form a {
     color: #333;
 }
@@ -513,6 +486,7 @@ html{
     box-shadow: none
 }
 
+/* to remove the text or change the mouse to pointer */
 .wrapper form input[type="text"]:focus::placeholder {
     color: transparent;
 }
@@ -533,6 +507,7 @@ input[type="date"] {
     color: transparent;
 }
 
+/* for the little pop-up texts*/
 .wrapper form .label::after {
     position: absolute;
     top: 5px;
@@ -611,6 +586,7 @@ input[type="date"] {
     content: 'Expiration Date';
 }
 
+/* if clicked the tiny pop-ups will appear*/
 .wrapper form input[type="text"]:focus~.label::after {
     top: -15px;
     left: 0px;
@@ -641,24 +617,24 @@ input[type="date"] {
     transform: scale(1)
 }
   
-  
-  .mycolumn {
+/*container for the covid declaration*/
+.mycolumn {
     float: left;
     width: 50%;
     padding: 10px;
-  }
-  
-  /* Clear floats after the columns */
-  .myrow:after {
+ }
+
+.myrow:after {
     content: "";
     display: table;
     clear: both;
-  }
+}
 
 .margin {
     margin: 2rem 0rem
 }
 
+/*for smaller screens*/
 @media(max-width: 575.5px) {
     .wrapper {
         margin: 10px
