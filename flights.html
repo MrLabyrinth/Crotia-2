@@ -317,7 +317,14 @@
 
 			<div class="form-group my-3">
 				<div class="btn btn-primary rounded-0 d-flex justify-content-center text-center p-3">
-					<a href="#" style="color:white" onclick="if(confirm('Are you sure to submit?')){}else{return false;};">Book Flight</a></div>
+					<a href="" style="color:white" onclick="alertbox()">Book Flight</a>
+				<script>
+					function alertbox(){
+						alert("Are you sure to submit?");
+
+						document.getElementById("myForm").reset();
+					}
+				</script></div>
 			</div>
 		</div>
 	</div>
